@@ -1,0 +1,64 @@
+<!-- sap-cloud-sdk-logo -->
+<!-- This block is inserted by scripts/replace-common-readme.ts. Do not adjust it manually. -->
+<a href="https://sap.com/s4sdk"><img src="https://help.sap.com/doc/2324e9c3b28748a4ae2ad08166d77675/1.0/en-US/logo-with-js.svg" alt="SAP Cloud SDK for JavaScript Logo" height="122.92" width="226.773"/></a>
+<!-- sap-cloud-sdk-logo-stop -->
+
+# @sap-cloud-sdk/temporal-de-serializers
+
+This package contains the [Temporal](https://tc39.es/proposal-temporal/docs/) based middleware for date/time (de-)serialization in the SAP Cloud SDK.
+
+## Installation
+
+```
+$ npm install @sap-cloud-sdk/temporal-de-serializers
+```
+
+## Usage
+```
+import { temporalDeSerializersV4 } from '@sap-cloud-sdk/temporal-de-serializers';
+
+const { businessPartnerApi } = businessPartnerService(temporalDeSerializersV4);
+businessPartnerApi
+  .entityBuilder()
+  .organizationFoundationDate(
+    Temporal.PlainDateTime.from('1995-12-07T03:24:30')
+  )
+  .build();
+```
+For more detailed overview visit our [Temporal middleware documentation](https://sap.github.io/cloud-sdk/docs/js/features/odata/use-odata-v2-type-safe-client-for-javascript-typescript#using-default-temporal-middleware).
+
+<!-- sap-cloud-sdk-common-readme -->
+<!-- This block is inserted by scripts/replace-common-readme.ts. Do not adjust it manually. -->
+## Support
+
+The recommended way to get in touch with us is to create an issue on [GitHub](https://github.com/SAP/cloud-sdk-js/issues).
+Select the issue category `Bug`, `Feature` or `Question` depending on the nature of your request.
+We try to provide fixes, features and answers as soon as possible.
+
+## Contribute
+
+If you would like to contribute to the SAP Cloud SDK, please make yourself familiar with our [contributing guidelines](https://github.com/SAP/cloud-sdk-js/blob/main/CONTRIBUTING.md) and follow the given instructions.
+
+## Links
+- [Official support channel](https://github.com/SAP/cloud-sdk-js/issues/new/choose)
+
+<br>
+
+- [Github](https://github.com/SAP/cloud-sdk-js)
+
+<br>
+
+- [SAP Cloud SDK Documentation portal](https://sap.github.io/cloud-sdk)
+- [SAP Cloud SDK Documentation portal - Getting started guide](https://sap.github.io/cloud-sdk/docs/js/getting-started)
+- [SAP Cloud SDK Documentation portal - API documentation](https://sap.github.io/cloud-sdk/api/latest)
+- [SAP Cloud SDK Documentation portal - Error handling](https://sap.github.io/cloud-sdk/docs/js/features/error-handling)
+- [SAP Cloud SDK Documentation portal - Release notes](https://sap.github.io/cloud-sdk/docs/js/release-notes-sap-cloud-sdk-for-javascript-and-typescript)
+
+<br>
+
+- [Sample repository](https://github.com/SAP-samples/cloud-sdk-js)
+
+## License
+
+The SAP Cloud SDK is released under the [Apache License Version 2.0.](http://www.apache.org/licenses/)
+<!-- sap-cloud-sdk-common-readme-stop -->

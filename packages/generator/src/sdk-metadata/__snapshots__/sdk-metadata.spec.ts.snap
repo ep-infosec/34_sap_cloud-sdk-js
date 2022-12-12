@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pregenerated-lib returns description of the service 1`] = `"SAP Cloud SDK for JavaScript: Generated client for service Test Service"`;
+
+exports[`sdk-metadata generates the sdk metadata content for services without pregenerated lib 1`] = `
+Object {
+  "apiSpecificUsage": "import { testService } from './generated/test-service';
+
+const { caseTestApi } = testService();
+const resultPromise = caseTestApi.requestBuilder().getAll().top(5).execute({ destinationName: 'myDestinationName' });
+",
+  "apiType": "OData",
+  "generatorVersion": Any<String>,
+  "language": "JavaScript",
+  "serviceStatus": "verified",
+}
+`;

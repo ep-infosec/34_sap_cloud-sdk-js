@@ -1,0 +1,57 @@
+{
+  "name": "@sap-cloud-sdk/openapi-generator",
+  "version": "2.12.0",
+  "description": "SAP Cloud SDK for JavaScript OpenAPI client generator",
+  "homepage": "https://sap.github.io/cloud-sdk/docs/js/overview-cloud-sdk-for-javascript",
+  "license": "Apache-2.0",
+  "keywords": [
+    "sap-cloud-sdk",
+    "cloud-sdk",
+    "sap-cloud-platform",
+    "generator"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "openapi-generator": "./dist/cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "internal.d.ts",
+    "internal.js"
+  ],
+  "repository": "github:SAP/cloud-sdk-js",
+  "scripts": {
+    "compile": "tsc -b",
+    "prepublishOnly": "yarn compile && yarn readme",
+    "test": "yarn test:unit",
+    "test:unit": "jest",
+    "coverage": "jest --coverage",
+    "lint": "eslint --ext .ts . && prettier . --config ../../.prettierrc --ignore-path ../../.prettierignore -c",
+    "lint:fix": "set TIMING=1 && eslint --ext .ts . --fix --quiet && prettier . --config ../../.prettierrc --ignore-path ../../.prettierignore -w --loglevel error",
+    "check:dependencies": "depcheck . --ignores='@sap-cloud-sdk/openapi'",
+    "check:public-api": "ts-node ../../scripts/check-public-api-cli.ts",
+    "readme": "ts-node ../../scripts/replace-common-readme.ts"
+  },
+  "dependencies": {
+    "@apidevtools/swagger-parser": "^10.0.3",
+    "@sap-cloud-sdk/generator-common": "^2.12.0",
+    "@sap-cloud-sdk/openapi": "^2.12.0",
+    "@sap-cloud-sdk/util": "^2.12.0",
+    "glob": "^8.0.1",
+    "js-yaml": "^4.0.0",
+    "openapi-types": "^12.1.0",
+    "swagger2openapi": "^7.0.4",
+    "yargs": "^17.6.2"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.0",
+    "@types/yargs": "^17.0.17",
+    "prettier": "^2.8.1",
+    "mock-fs": "^5.2.0",
+    "typescript": "~4.9.4"
+  }
+}

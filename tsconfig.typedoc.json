@@ -1,0 +1,86 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "./packages/util/**/*",
+    "./packages/odata-common/**/*",
+    "./packages/odata-v2/**/*",
+    "./packages/odata-v4/**/*",
+    "./packages/connectivity/**/*",
+    "./packages/http-client/**/*",
+    "./packages/mail-client/**/*",
+    "./packages/openapi/**/*",
+    "./packages/generator/**/*",
+    "./packages/openapi-generator/**/*",
+    "./packages/test-util/**/*",
+    "./packages/temporal-de-serializers/**/*"
+  ],
+  "exclude": [
+    "**/*.spec.ts"
+  ],
+  "references": [
+    {
+      "path": "./packages/util"
+    },
+    {
+      "path": "./packages/odata-common"
+    },
+    {
+      "path": "./packages/odata-v2"
+    },
+    {
+      "path": "./packages/odata-v4"
+    },
+    {
+      "path": "./packages/connectivity"
+    },
+    {
+      "path": "./packages/http-client"
+    },
+    {
+      "path": "./packages/mail-client"
+    },
+    {
+      "path": "./packages/openapi"
+    },
+    {
+      "path": "./packages/generator"
+    },
+    {
+      "path": "./packages/openapi-generator"
+    },
+    {
+      "path": "./packages/test-util"
+    },
+    {
+      "path": "./packages/temporal-de-serializers"
+    }
+  ],
+  "typedocOptions": {
+    "out": "docs/api/2.12.0",
+    "entryPoints": [
+      "packages/util/src/index.ts",
+      "packages/connectivity/src/index.ts",
+      "packages/http-client/src/index.ts",
+      "packages/mail-client/src/index.ts",
+      "packages/odata-common/src/index.ts",
+      "packages/odata-v2/src/index.ts",
+      "packages/odata-v4/src/index.ts",
+      "packages/openapi/src/index.ts",
+      "packages/generator/src/index.ts",
+      "packages/openapi-generator/src/index.ts",
+      "packages/test-util/src/index.ts",
+      "packages/temporal-de-serializers/src/index.ts"
+    ],
+    "name": "SAP Cloud SDK for JavaScript / TypeScript",
+    "readme": "DOCUMENTATION.md",
+    "theme": "default",
+    "includeVersion": true,
+    "hideGenerator": true,
+    "excludePrivate": true,
+    "includes": "packages",
+    "treatWarningsAsErrors": true,
+    "validation": {
+      "invalidLink": true
+    }
+  }
+}

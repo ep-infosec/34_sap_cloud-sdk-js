@@ -1,0 +1,34 @@
+{
+  "name": "@sap-cloud-sdk/test-services-odata-common",
+  "version": "2.12.0",
+  "description": "Custom Services for testing",
+  "files": [
+    "**/*.js",
+    "**/*.js.map",
+    "**/*.d.ts",
+    "**/d.ts.map",
+    "**/*-csn.json"
+  ],
+  "private": true,
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "scripts": {
+    "generate": "ts-node generate-common-entity.ts",
+    "check:dependencies": "depcheck .",
+    "lint": "prettier . --config ../../.prettierrc --ignore-path ../../.prettierignore -c",
+    "lint:fix": "prettier . --config ../../.prettierrc --ignore-path ../../.prettierignore -w --loglevel error"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "bignumber.js": "^9.1.1",
+    "moment": "^2.29.4"
+  },
+  "devDependencies": {
+    "@sap-cloud-sdk/generator-common": "^2.12.0"
+  },
+  "peerDependencies": {
+    "@sap-cloud-sdk/generator": "^2.3.0",
+    "@sap-cloud-sdk/util": "^2.3.0"
+  }
+}
